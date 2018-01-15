@@ -5,24 +5,37 @@ public class MyFirstProgram {
 public static void main (String[] args) {
     hello("Thomaas");
 
-    double len = 0.5;
-    System.out.println("square of "+ len +"= " +area(len));
+    Square s = new Square(0.5);
+    /*s.l = 0.5;*/
+    System.out.println("square of "+ s.l +"= " +s.area());
 
-    double a = 15;
-    double b=25;
+    Rectangle r = new Rectangle(15,25);
+   /* r.a = 15;
+    r.b=25;*/
 
-    System.out.println("площадь прямоугольника со сторонами " +a+ " и " +b+ "= " +area(a,b));
+    System.out.println("площадь прямоугольника со сторонами " +r.a+ " и " +r.b+ "= " +r.area());
+
+    Point p1 = new Point(5,6);
+    Point p2 = new Point(12,13);
+
+    System.out.println(Point.distance(p1,p2));
+
+
 }
    public static void hello (String somebody) {
         System.out.println("Hello, " + somebody);
     }
 
-    public static double area (double l) {
-        return l*l;
-    }
 
-    public static double area (double a, double b) {
-    return a*b;
-    }
+
+
+
+
+
+
+
+
+
+
 
 }
